@@ -1,0 +1,12 @@
+version: 2.1
+orbs:
+  newman: postman/newman@0.0.2
+jobs:
+  build:
+    executor: newman/postman-newman-docker
+    steps:
+      - checkout
+      - newman/newman-run:
+          collection: ./postman_automation/Organization-Dev.postman_collection.json
+          environment: ./postman_automation/OrgDevTest.postman_environment.json
+          #timeout: '1000'
