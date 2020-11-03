@@ -9,4 +9,4 @@ jobs:
       - newman/newman-run:
           collection: ./postman_automation/Organization-Dev.postman_collection.json
           environment: ./postman_automation/OrgDevTest.postman_environment.json
-          #timeout: '1000'
+          timeout: '1000'
